@@ -1,19 +1,21 @@
-// main-2-3.cpp
 #include <iostream>
-#include "function-2-3.cpp" // Include the source file containing the functions
+
+// Function declarations
+bool is_palindrome(int integers[], int length);
+int sum_array_elements(int integers[], int length);
+int sum_if_palindrome(int integers[], int length);
 
 int main() {
-    int array1[] = {1, 2, 3, 2, 1};
-    int array2[] = {1, 2, 3, 4, 5};
-    int array3[] = {}; // Empty array example
+    // Test cases
+    int test1[] = {1, 2, 3, 2, 1};
+    int test2[] = {1, 2, 3, 4, 5};
+    int test3[] = {1};
+    int test4[] = {};
 
-    int result1 = sum_if_palindrome(array1, 5);
-    int result2 = sum_if_palindrome(array2, 5);
-    int result3 = sum_if_palindrome(array3, 0);
-
-    std::cout << "Result for array1: " << result1 << std::endl;
-    std::cout << "Result for array2: " << result2 << std::endl;
-    std::cout << "Result for array3: " << result3 << std::endl;
+    std::cout << "Test 1: " << sum_if_palindrome(test1, 5) << std::endl;
+    std::cout << "Test 2: " << sum_if_palindrome(test2, 5) << std::endl;
+    std::cout << "Test 3: " << sum_if_palindrome(test3, 1) << std::endl;
+    std::cout << "Test 4: " << sum_if_palindrome(test4, 0) << std::endl;
 
     return 0;
 }
