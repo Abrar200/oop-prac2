@@ -1,19 +1,21 @@
-// main-2-4.cpp
 #include <iostream>
-#include "function-2-4.cpp" // Include the source file containing the functions
+
+// Function declarations
+int array_min(int integers[], int length);
+int array_max(int integers[], int length);
+int sum_min_max(int integers[], int length);
 
 int main() {
-    int array1[] = {5, 3, 7, 1, 9, 2};
-    int array2[] = {-1, -3, -7, -10, -5};
-    int array3[] = {}; // Empty array example
+    // Test cases
+    int test1[] = {1, 2, 3, 4, 5};
+    int test2[] = {-5, 0, 5, 10, 15};
+    int test3[] = {7};
+    int test4[] = {};
 
-    int result1 = sum_min_max(array1, 6);
-    int result2 = sum_min_max(array2, 5);
-    int result3 = sum_min_max(array3, 0);
-
-    std::cout << "Result for array1: " << result1 << std::endl;
-    std::cout << "Result for array2: " << result2 << std::endl;
-    std::cout << "Result for array3: " << result3 << std::endl;
+    std::cout << "Test 1: " << sum_min_max(test1, 5) << std::endl;
+    std::cout << "Test 2: " << sum_min_max(test2, 5) << std::endl;
+    std::cout << "Test 3: " << sum_min_max(test3, 1) << std::endl;
+    std::cout << "Test 4: " << sum_min_max(test4, 0) << std::endl;
 
     return 0;
 }
