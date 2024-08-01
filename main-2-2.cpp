@@ -1,13 +1,17 @@
-// main-2-2.cpp
 #include <iostream>
-#include "function-2-2.cpp" // Include the source file containing the binary_to_int function
+
+// Function declaration
+int binary_to_int(int binary_digits[], int number_of_digits);
 
 int main() {
-    int binary_array[] = {1, 0, 1, 1}; // Binary for 11
-    int number_of_digits = 4;
+    // Test cases
+    int test1[] = {1, 0, 1};
+    int test2[] = {1, 1, 1, 1, 1, 1, 1};
+    int test3[] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    int result = binary_to_int(binary_array, number_of_digits);
-    std::cout << "The integer value is: " << result << std::endl;
+    std::cout << "Test 1: " << binary_to_int(test1, 3) << std::endl;
+    std::cout << "Test 2: " << binary_to_int(test2, 7) << std::endl;
+    std::cout << "Test 3: " << binary_to_int(test3, 30) << std::endl;
 
     return 0;
 }
