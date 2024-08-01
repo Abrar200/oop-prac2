@@ -1,16 +1,32 @@
-// main-1-3.cpp
 #include <iostream>
-#include "function-1-3.cpp" // Include the source file containing the count_digits function
+
+// Function declaration
+void count_digits(int array[4][4]);
 
 int main() {
-    int matrix[4][4] = {
-        {1, 0, 0, 4},
-        {5, 1, 0, 8},
-        {9, 0, 1, 3},
-        {1, 7, 0, 6}
+    // Example 4x4 matrix (identity matrix)
+    int identity_matrix[4][4] = {
+        {1, 0, 0, 0},
+        {0, 1, 0, 0},
+        {0, 0, 1, 0},
+        {0, 0, 0, 1}
     };
 
-    count_digits(matrix);
+    // Test the function with the identity matrix
+    std::cout << "Digit counts for identity matrix:" << std::endl;
+    count_digits(identity_matrix);
+
+    // Another example 4x4 matrix with various digits
+    int mixed_matrix[4][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 0, 1, 2},
+        {3, 4, 5, 6}
+    };
+
+    // Test the function with the mixed matrix
+    std::cout << "Digit counts for mixed matrix:" << std::endl;
+    count_digits(mixed_matrix);
 
     return 0;
 }
