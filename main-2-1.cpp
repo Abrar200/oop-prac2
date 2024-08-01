@@ -1,4 +1,7 @@
-#include "function-2-1.cpp"
+#include <string>
+
+// Function declaration
+void print_binary_str(std::string decimal_number);
 
 int main() {
     // Test cases
