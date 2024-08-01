@@ -1,21 +1,16 @@
-// function-2-1.cpp
+#ifndef BINARY_CONVERTER_H
+#define BINARY_CONVERTER_H
+
 #include <iostream>
 #include <string>
-#include <algorithm> // For std::reverse
+#include <bitset>
 
 void print_binary_str(std::string decimal_number) {
-    int number = std::stoi(decimal_number);
-    if (number == 0) {
-        std::cout << "0\n";
-        return;
-    }
-
-    std::string binary_str;
-    while (number > 0) {
-        binary_str += (number % 2 == 0) ? '0' : '1';
-        number /= 2;
-    }
+    // Convert string to integer
+    int num = std::stoi(decimal_number);
     
-    std::reverse(binary_str.begin(), binary_str.end());
-    std::cout << binary_str << "\n";
+    // Convert to binary and print
+    std::cout << std::bitset<32>(num).to_string().substr(std::bitset<32>(num).to_string().find('1')) << std::endl;
 }
+
+#endif // BINARY_CONVERTER_H
